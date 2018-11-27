@@ -1,4 +1,4 @@
-package doubles_and_booleans;
+ package doubles_and_booleans;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
@@ -18,13 +18,28 @@ public class SleepyHead {
          * Ask the user for these values using a confirm dialog like the one below
          * JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
          */
-        JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
-        	
+        int equal = JOptionPane.showConfirmDialog(null, "Is it a weekday?", "Sleepy Head", JOptionPane.YES_NO_OPTION);
+			System.out.println(equal);
+			if (equal == 0) {
+				isWeekday = true;
+			equal = JOptionPane.showConfirmDialog(null, "Are you in vaction","sleepy Head",JOptionPane.YES_NO_OPTION);
+			     if(equal==1) {
+			    	isVacation=true;
+			    	 JOptionPane.showMessageDialog(null, "get up lazybones");
+			     }
+			     else if(equal==1);
+			     isVacation = false;
+			     JOptionPane.showMessageDialog(null, "sleep in");
+		} else if (equal == 1) {
+			isWeekday = false;
+			JOptionPane.showMessageDialog(null,"sleep in");
+		}
 
         /*
          * Print â€œsleep inâ€? if it is a vacation or a weekend. If itâ€™s a weekday,
          * print â€œget up lazybones!â€? If it is a weekday, and we are on vacation,
          * print â€œsleep inâ€?.
          */
+    
     }
 }
