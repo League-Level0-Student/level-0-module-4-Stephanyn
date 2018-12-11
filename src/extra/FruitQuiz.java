@@ -16,7 +16,8 @@ public class FruitQuiz extends KeyAdapter {
 	void makeQuestions() {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		question2 = new JLabel("<html>What is the name of the emperor of the Yuan dynasty?<br>A:Genghis Khan <br>B:Khubilai Khan <br>C: Shi Huangdi </html>");
-		
+		question3 = new JLable("<html>what did the Mongles do to Kaffa?<br> A: biological warfare<br> B: destroy the city walls<br> C: left because they were infected with the plague</html>"); 
+		question4 = new JLable("<html>How long is the Bayeux Tapastry?<br>A:224ft<br>B:32ft<br>C:54ft");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
 	}
 
@@ -32,7 +33,7 @@ public class FruitQuiz extends KeyAdapter {
 		// 14. Repeat steps 11, 12, and 13 for question3 and question4 - IMPORTANT: The questions must be in reverse order from top to bottom to work properly
 		
 		// 12. If question2 is showing,
-			if(question)
+		
 			// 13. check if it is right or wrong like you did for question1
 		
 			
@@ -40,10 +41,25 @@ public class FruitQuiz extends KeyAdapter {
 			// 3. If they selected the right fruit, do steps 4 and 7
 			if(question1.equals("C")) {
 				correct();
-				nextQuestion();
+				nextQuestion(question2);
 			}else if(question1.equals("A")){
 				incorrect();
 			}else if(question1.equals("B"));
+				incorrect();
+		if(question2.isShowing()){
+			if(question2.equals("B")) {
+				correct();
+				
+			}else if(question2.equals("A"));
+				incorrect();
+		}else if(question2.equals("c"));
+		
+		if(question3.isShowing()) {
+			if(question3.equals("A")) {
+				correct();
+			}else if(question3.equals("B"));
+				incorrect();
+		}else if(question3.equals("C"));
 				// 4. Call the correct() method
 				
 				// 7. Use the nextQuestion() method to go to question2
