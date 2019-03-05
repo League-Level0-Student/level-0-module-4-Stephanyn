@@ -8,31 +8,21 @@ public class SimpleSorter {
 		int a=Integer.parseInt(userNums);
 		int b=Integer.parseInt(usernum2);
 		int c= Integer.parseInt(usernum3);
-			if(a>b) {
+				if (a<b) {
 				int temp = 0;
 				temp=a;
 				a=b;
 				b=temp;
-			}else if (b>a) {
+			}if (b<c){
 				int temp = 0;
 				temp=b;
-				b=a;
-				a=temp;
-			}else if (c>a){
-				int temp = 0;
-				temp=c;
-				c=a;
-				a=temp;
-			}else if (c>b){
-				int temp = 0;
-				temp=c;
-				c=b;
-				b=temp;
-			}else if (a>c){
-				int temp = 0;
-				temp=a;
-				a=c;
+				b=c;
 				c=temp;
+			}if (a<b) {
+				int temp = 0;
+				temp = a;
+				a=b;
+				b=temp;
 			}
 		
 		
